@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .login_password {
+            width: 80%;
+            height: 30px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin: 5px 0 10px 0;
+            transition: border-color 0.3s ease;
+        }
+
+        input {
+            width: calc(100% - 40px); /* Chiếm hết phần .login_password trừ đi kích thước của thẻ i và span */
+            border: none;
+            height: 100%;
+            margin-left: 5px;
+            outline: none; /* Ẩn đường viền khi focus */
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="login_password">
+        <input type="password" placeholder="password" id="passwordInput">
+        <span class="password-toggle" onclick="togglePasswordVisibility()">
+            <i class="fa-regular fa-eye"></i>
+        </span>
+    </div>
+
+    <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById('passwordInput');
+            var passwordToggle = document.querySelector('.password-toggle i');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                passwordToggle.classList.remove('fa-eye');
+                passwordToggle.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                passwordToggle.classList.remove('fa-eye-slash');
+                passwordToggle.classList.add('fa-eye');
+            }
+        }
+    </script>
+</body>
+</html>
