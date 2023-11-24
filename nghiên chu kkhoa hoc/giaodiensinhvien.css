@@ -1,0 +1,211 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+  }
+  
+  aside {
+    
+  }
+  
+  main {
+    flex: 1; /* main sẽ mở rộng để lấp đầy phần trống còn lại bên phải */
+  }
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    font-size: 10px;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+/*--------------------------------header----------------*/
+header {
+    padding: 10px 20px ;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    background: dodgerblue;
+    border-radius: 0 0 10px 10px;
+}
+
+.logo {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.menu {
+    flex: 3;
+    display: flex;
+}
+
+.menu ul{
+    display: flex;
+}
+
+.menu ul li {
+    padding: 0 12px ;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.menu ul .boder-bottom {
+    display: none;
+    border: 2px solid rgb(45, 87, 122);
+    transition: all 0.5s ease;
+}
+
+.menu li:hover .boder-bottom {
+    display: block;
+}
+
+.menu li:hover a{
+    transform: translateY(-5px);
+    font-size: 14px;
+    color: aqua;
+}
+
+.menu li a {
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    line-height: 20px;
+    transition: all 0.4s ease;
+}
+
+.others {
+    flex: 1;
+    display: flex;
+}
+
+.others li {
+    padding: 0 12px;
+    position: relative;
+    color: black;
+    transition: all 0.6s ease;
+}
+
+.others li:hover {
+    color: aqua;
+}
+
+.others li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 80%;
+    background: #ddd;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* ---------footer---------*/
+
+footer {
+    width: 100%;
+    height: 20px;
+    bottom: 0;
+    background-color: #ddd;
+    background: turquoise;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    z-index: 1;
+}
+
+
+
+.footer-left {
+    flex: 2;
+    display: flex;
+    padding: 0 10px;
+}
+
+
+
+.footer-right {
+    flex: 1;
+    display: flex;
+    padding: 0 10px;
+    justify-content: right;
+}
+
+.footer-right p {
+    margin: 0 10px;
+}
+
+/*-------------------------------aside----------------------*/
+aside {
+    width: 25%;
+    padding: 20px;
+    background: steelblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.aside-dang_ky {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    
+    background: turquoise;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.aside-dang_ky:hover {
+    transform: translateX(20px);
+}
+.aside-trang_thai {
+    width: 100%;
+    padding: 10px 0;
+    background: turquoise;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.aside-trang_thai:hover {
+    transform: translateX(20px);
+}
+

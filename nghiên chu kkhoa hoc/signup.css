@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: azure;
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 40%;
+    max-width: 500px;
+    background-color: azure;
+    background: fixed;
+    border: 2px solid black;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 5px 5px 8px 0 ;
+}
+
+.signup_signup {
+    margin: 50px 0 30px 0;
+}
+
+.signup_username, 
+.signup_password, 
+.signup_againPassword {
+    width: 80%;
+    height: 30px;
+    background: white;
+    border: 1px solid #ccc; /* Sử dụng màu xám nhẹ cho đường viền */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 5px 0 10px 0;
+    transition: border-color 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+.signup_username:hover ,
+.signup_pasword:hover ,
+.signup_againPassword:hover {
+    border-color: chocolate;
+}
+
+.signup_username:focus-within,
+.signup_password:focus-within,
+.signup_againPassword:focus-within {
+    border: 3px inset chocolate;
+}
+
+.signup_username input,
+.signup_againPassword input ,
+.signup_password input {
+    width: calc(100% - 40px);
+    height: 100%;
+    border: none;
+    outline: none;
+    margin-left: 5px;
+}
+
+ i {
+    position: absolute;
+    right: 0;
+    margin-right: 15px;
+}
+
+
+
+button {
+    width: 80%;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    margin: 15px 0 10px 0;
+}
+
+button:hover{
+    font-weight: bolder;
+    color: chocolate;
+    border: 3px inset chocolate;
+    
+}
+
+p {
+    margin: 0 0 30px 0;
+}
+
